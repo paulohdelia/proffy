@@ -1,11 +1,9 @@
 import express from 'express';
-import router from './routes';
+import routes from './routes';
 
 const server = express();
 
-server.use(router);
 server.use(express.json());
+server.use(routes);
 
-server.listen(3333, () => {
-  console.log('server is running...');
-});
+server.listen(3333);
