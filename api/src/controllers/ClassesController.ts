@@ -39,9 +39,9 @@ export default {
       .join('users', 'classes.user_id', '=', 'users.id')
       .select(['classes.*', 'users.*']);
 
-    return response.status(200).json({
+    return response.status(200).json(
       classes
-    })
+    );
   },
 
   async create(request: Request, response: Response) {
