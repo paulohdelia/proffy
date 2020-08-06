@@ -2,6 +2,8 @@
   <img src=".github/proffy-banner.png"/>
 </h1>
 
+Projeto desenvolvido durante a NLW #02 da Rocketseat. 🚀
+
 <p>
   <a href="https://github.com/paulohdelia">
       <img src="https://img.shields.io/badge/author-paulohdelia-important?style=flat-square" alt="author">
