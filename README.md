@@ -2,10 +2,12 @@
   <img src=".github/proffy-banner.png"/>
 </h1>
 
-<a href="https://github.com/paulohdelia">
-    <img src="https://img.shields.io/badge/author-paulohdelia-important?style=flat-square" alt="author">
-</a>
-<img src="https://img.shields.io/github/languages/count/paulohdelia/proffy?color=important&style=flat-square">
+<p>
+  <a href="https://github.com/paulohdelia">
+      <img src="https://img.shields.io/badge/author-paulohdelia-important?style=flat-square" alt="author">
+  </a>
+  <img src="https://img.shields.io/github/languages/count/paulohdelia/proffy?color=important&style=flat-square">
+</p>
 
 ## 🔥 Sobre o projeto
 
