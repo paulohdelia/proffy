@@ -1,5 +1,5 @@
 <h1>
-  <img src=".github/proffy-banner.png"/>
+  <img src="http://drive.google.com/uc?export=view&id=1W_f_dTYSv8JBjCmxqmBGffqRZ-lWINhg"/>
 </h1>
 
 Projeto desenvolvido durante a NLW #02 da Rocketseat. 🚀
