@@ -3,33 +3,55 @@ import React from 'react';
 import WhatsappIcon from '../../assets/images/icons/whatsapp.svg';
 
 import './styles.css';
+import api from '../../services/api';
 
-const TeacherItem: React.FC = () => {
+export interface Teacher {
+  id: number;
+  avatar: string;
+  bio: string;
+  cost: number;
+  name: string;
+  subject: string;
+  whatsapp: string;
+}
+
+interface TeacherItemProps {
+  teacher: Teacher;
+}
+
+const TeacherItem: React.FC<TeacherItemProps> = ({
+  teacher
+}) => {
+
+  function createNewConnection() {
+    api.post('connections', {
+      user_id: teacher.id
+    });
+  }
+
+  const { avatar, bio, cost, name, subject, whatsapp } = teacher;
+
   return (
     <article className="teacher-item">
       <header>
-        <img src="https://pbs.twimg.com/profile_images/1290019927131328514/daIq34Sw_400x400.jpg" alt="Atila Iamarino" />
+        <img src={avatar} alt={name} />
         <div>
-          <strong>Atila Iamarino</strong>
-          <span>Biologia</span>
+          <strong>{name}</strong>
+          <span>{subject}</span>
         </div>
       </header>
 
-      <p>
-        Biólogo, divulgador científico e explicador do mundo por opção.
-          <br /><br />
-            Apaixonado por ler um milhão de livros e explicar coisas no YouTube.
-          </p>
+      <p>{bio}</p>
 
       <footer>
         <p>
           Preço/hora
-              <strong>R$ 333,00</strong>
+          <strong>R$ {cost}</strong>
         </p>
-        <button type="button">
+        <a onClick={createNewConnection} target="_blank" rel="noopener noreferrer" href={`https://wa.me/${whatsapp}`}>
           <img src={WhatsappIcon} alt="whatsapp" />
               Entrar em contato
-            </button>
+        </a>
       </footer>
     </article>
   );
