@@ -22,12 +22,19 @@ E os professores podem exibir a matéria que lecionam, disponibilzar os dias da 
 - [Web](./web)
 - [Mobile](./mobile)
 
-<br>
+## :gem: Resultado final
 
-## :gem: Demonstração
-
+### App nativo
 <img src="http://drive.google.com/uc?export=view&id=1qW1lEDcG1Qy2yB_ITJJkA1Ywr7DC16B3" >
 
+### Web
 <img src="http://drive.google.com/uc?export=view&id=1tSPYsHlQlulMYZi6Zp3cAXr8KQT-qPzO" >
+
+## ⚒ Tecnologias
+
+- Node
+- ReactJS
+- ReactNative
+- Typescript
 
 <h4 align=center>Made with 🧡 by <a href="https://www.linkedin.com/in/paulodelia/">Paulo D'Elia</a></h4>
