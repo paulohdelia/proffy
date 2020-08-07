@@ -29,7 +29,6 @@ Projeto desenvolvido durante a NLW #02 da Rocketseat. 🚀
 <img src="http://drive.google.com/uc?export=view&id=1tSPYsHlQlulMYZi6Zp3cAXr8KQT-qPzO" >
 
 # :fire: Tecnologias
-Esse projeto foi feito utilizando as seguintes tecnologias:
 
 * [Typescript](https://www.typescriptlang.org/)      
 * [React](https://reactjs.org/)      
