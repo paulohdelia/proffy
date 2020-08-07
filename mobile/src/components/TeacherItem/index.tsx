@@ -23,6 +23,7 @@ const {
   favoriteButton,
   contactButton,
   contactButtonText,
+  favorited,
 } = styles;
 
 function TeacherItem() {
@@ -54,8 +55,9 @@ function TeacherItem() {
 
         <View style={buttonsContainer}>
 
-          <RectButton style={favoriteButton}>
-            <Image source={heartOutlineIcon} />
+          <RectButton style={[favoriteButton, favorited]}>
+            {/* <Image source={heartOutlineIcon} /> */}
+            <Image source={unfavoriteIcon} />
           </RectButton>
 
           <RectButton style={contactButton}>
