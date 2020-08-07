@@ -37,4 +37,6 @@ E os professores podem exibir a matéria que lecionam, disponibilzar os dias da 
 - ReactNative
 - Typescript
 
+<br>
+
 <h4 align=center>Made with 🧡 by <a href="https://www.linkedin.com/in/paulodelia/">Paulo D'Elia</a></h4>
