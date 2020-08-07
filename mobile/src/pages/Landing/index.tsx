@@ -1,0 +1,58 @@
+import React from 'react';
+
+import { View, Image, Text, TouchableOpacity } from 'react-native';
+
+import styles from './styles';
+const {
+  container,
+  banner,
+  title,
+  titleBold,
+  buttonsContainer,
+  button,
+  buttonPrimary,
+  buttonSecondary,
+  buttonText,
+  totalConnections,
+} = styles;
+
+import landingImg from '../../assets/images/landing.png';
+import studyIcon from '../../assets/images/icons/study.png';
+import giveClassesIcon from '../../assets/images/icons/give-classes.png';
+import heartIcon from '../../assets/images/icons/heart.png';
+
+function Landing() {
+  return (
+    <View style={container} >
+      <Image source={landingImg} style={banner} />
+
+      <Text style={title}>
+        Seja bem-vindo, {'\n'}
+        <Text style={titleBold}>
+          O que deseja fazer?
+        </Text>
+      </Text>
+
+      <View style={buttonsContainer}>
+        <TouchableOpacity style={[button, buttonPrimary]}>
+          <Image source={studyIcon} />
+
+          <Text style={buttonText}>Estudar</Text>
+        </TouchableOpacity>
+
+        <TouchableOpacity style={[button, buttonSecondary]}>
+          <Image source={giveClassesIcon} />
+
+          <Text style={buttonText}>Dar aulas</Text>
+        </TouchableOpacity>
+      </View>
+
+      <Text style={totalConnections}>
+        Total de 300 conexões já realizadas {' '}
+        <Image source={heartIcon} />
+      </Text>
+    </View>
+  );
+}
+
+export default Landing;
