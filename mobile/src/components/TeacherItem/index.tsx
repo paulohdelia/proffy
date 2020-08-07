@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { View, Text, Image } from 'react-native';
+import { View, Text, Image, Linking } from 'react-native';
 import { RectButton } from 'react-native-gesture-handler';
 
 import heartOutlineIcon from '../../assets/images/icons/heart-outline.png';
@@ -26,31 +26,50 @@ const {
   favorited,
 } = styles;
 
-function TeacherItem() {
+export interface Teacher {
+  id: number;
+  avatar: string;
+  bio: string;
+  cost: number;
+  name: string;
+  subject: string;
+  whatsapp: string;
+}
+
+interface TeacherItemProps {
+  teacher: Teacher;
+}
+
+const TeacherItem: React.FC<TeacherItemProps> = ({
+  teacher,
+}) => {
+
+  function handleLinkToWhatsapp() {
+    Linking.openURL(`whatsapp://send?phone=${teacher.whatsapp}`)
+  }
+
   return (
     <View style={container}>
       <View style={profile}>
         <Image
           style={avatar}
-          source={{ uri: 'https://avatars2.githubusercontent.com/u/47276018?s=400&v=4' }}
+          source={{ uri: teacher.avatar }}
         />
 
         <View style={profileInfo}>
-          <Text style={name}>Paulo D'Elia</Text>
-          <Text style={subject}>Matemática</Text>
+          <Text style={name}>{teacher.name}</Text>
+          <Text style={subject}>{teacher.subject}</Text>
         </View>
       </View>
 
       <Text style={bio}>
-        Olá para quem está vendo o gif do Mobile, essa é a bio de demonstração
-        {'\n'}{'\n'}
-        Hello!
+        {teacher.bio}
       </Text>
 
       <View style={footer}>
         <Text style={price}>
           Preço/hora {'   '}
-          <Text style={priceValue}>R$ 20,00</Text>
+          <Text style={priceValue}>R$ {teacher.cost}</Text>
         </Text>
 
         <View style={buttonsContainer}>
@@ -60,7 +79,7 @@ function TeacherItem() {
             <Image source={unfavoriteIcon} />
           </RectButton>
 
-          <RectButton style={contactButton}>
+          <RectButton onPress={handleLinkToWhatsapp} style={contactButton}>
             <Image source={whatsappIcon} />
             <Text style={contactButtonText}>Entrar em contato</Text>
           </RectButton>
